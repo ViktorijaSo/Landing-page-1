@@ -5,18 +5,67 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  margin: 0;
 }
 header a {
   text-decoration: none;
   color: white;
+
 }
 
 header {
-  width: 1000px;
+  max-width: 1139px;
+  padding: 23px 24px;
   display: flex;
   justify-content: space-between;
   margin: auto;
 }
+
+.top-menu {
+  display: flex;
+}
+
+.top-menu a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+
+header .top-menu .download img {
+  vertical-align: middle;
+}
+
+/*.top-menu a.components {
+  vertical-align: middle;
+}*/
+
+.top-menu a.download {
+  margin-left: 30px;
+}
+
+.top-menu a.twitter {
+  margin-left: 27px;
+}
+
+.top-menu a.facebook,
+.top-menu a.instagram {
+  margin-left: 24px;
+}
+
+header .burger-icon {
+  display: none;
+}
+
+/*.top-menu a.download img{
+  vertical-align: middle;
+}*/
+
+/*.top-menu a.download {
+  vertical-align: top;
+}*/
 
 main {
   display: flex;
@@ -79,4 +128,49 @@ form {
 content: url('face.png');
 margin-right: 15px;
 margin-left: 4px;
+}
+
+@media only screen and (max-width: 786px) {
+  header {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  header .burger-icon {
+    display: initial;
+  }
+  
+  header .top-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+    position: fixed;
+    top: 45px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.603);
+  }
+
+  header .top-menu a.components {
+    margin: 5px 5px 5px 25px;
+  }
+
+  header .top-menu a.download,
+  header .top-menu a.twitter,
+  header .top-menu a.facebook,
+  header .top-menu a.instagram {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+
+  header nav.open {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .first-name input {
+    width: 200px;
+  }
 }
